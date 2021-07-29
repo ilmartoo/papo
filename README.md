@@ -1,6 +1,7 @@
 # PAPO
 
 A comical parser for a comical language.
+
 You are free to clone this repo and use the parser as much as you want.
 
 ### Example
