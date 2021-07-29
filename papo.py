@@ -7,10 +7,10 @@ def load(f: str or object) -> str:
         file = open(f, 'rt')
     elif _is_file(f):
         file = f
+        file.seek(0)
     else:
         raise TypeError('Input must be an existing text readable file or a path to an existing readable file')
 
-    file.seek(0)
     text = file.read()
     papo = re.sub(r'(^|\s)([Pp]apo){0,1}(\w)', _capitalize_match, text)
 
