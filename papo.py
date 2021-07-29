@@ -26,4 +26,4 @@ def _capitalize_match(m: re.Match) -> str:
     return f'{m.group(1)}{papo}'
 
 def _is_file(f: object) -> bool:
-    return isinstance(f, io.TextIOWrapper) if sys.version_info[0] == 2 else hasattr(f, 'read')
+    return isinstance(f, io.TextIOWrapper) if sys.version_info[0] == 2 else hasattr(f, 'read') and hasattr(f, 'seek')
