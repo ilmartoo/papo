@@ -45,7 +45,7 @@ def load(f: str or object) -> str:
         file = f
         file.seek(0)
     else:
-        raise TypeError('Input must be an existing text readable file or a path to an existing readable file')
+        raise TypeError('Input must be an existing text papo readable file or a path to an existing papo readable file')
 
     text = file.read()
     papo = re.sub(r'(^|\s)(((Papo|papo|PAPO){1}\w*)|(\w+))', _capitalize_match, text)
